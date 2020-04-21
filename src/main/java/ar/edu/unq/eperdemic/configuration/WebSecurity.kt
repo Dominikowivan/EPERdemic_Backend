@@ -24,8 +24,8 @@ class WebSecurity : WebSecurityConfigurerAdapter() {
         val configuration = CorsConfiguration()
         configuration.allowedOrigins = Arrays.asList("*")
         configuration.allowedMethods = Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
-        configuration.allowedHeaders = Arrays.asList("authorization", "content-type", "x-auth-token")
-        configuration.exposedHeaders = Arrays.asList("x-auth-token")
+        configuration.allowedHeaders = Arrays.asList("*")
+        configuration.allowCredentials = false
         val source = UrlBasedCorsConfigurationSource()
         source.registerCorsConfiguration("/**", configuration)
         return source
