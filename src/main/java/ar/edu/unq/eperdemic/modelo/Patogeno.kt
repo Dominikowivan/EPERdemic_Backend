@@ -10,7 +10,7 @@ class Patogeno(
 
         @Id
         @EmbeddedId
-        val patogenoId: PatogenoId,
+        val id: PatogenoId,
         val tipo: String,
         val cantidadDeEspecies: Int) : Serializable {
 
