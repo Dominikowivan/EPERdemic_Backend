@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 
 interface ReportesRepository : CrudRepository<ReporteDeContagio, ReporteDeContagioID> {
-    @Query(value = "SELECT * FROM REPORTE_DE_CONTAGIO ORDER BY VECTORES_INFECTADOS DESC LIMIT 10", nativeQuery = true)
+    @Query(value = "SELECT * FROM REPORTE_DE_CONTAGIO ORDER BY VECTORES_INFECTADOS, ESPECIE_MAS_INFECCIOSA DESC LIMIT 10", nativeQuery = true)
     fun getLocacionesLideres(): List<ReporteDeContagio>
 }
