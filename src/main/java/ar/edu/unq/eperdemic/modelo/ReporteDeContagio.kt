@@ -13,6 +13,7 @@ class ReporteDeContagio(
         val vectoresPresentes: Int,
         @Column(name = "VECTORES_INFECTADOS")
         val vectoresInfectados: Int,
+        @Column(name = "ESPECIE_MAS_INFECCIOSA")
         val nombreDeEspecieMasInfecciosa: String
 ) {
 
