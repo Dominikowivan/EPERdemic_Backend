@@ -10,6 +10,7 @@ class ReporteDeContagio(
         @Id
         @EmbeddedId
         val id: ReporteDeContagioID,
+        @Column(name = "VECTORES_PRESENTES")
         val vectoresPresentes: Int,
         @Column(name = "VECTORES_INFECTADOS")
         val vectoresInfectados: Int,
